@@ -1,0 +1,63 @@
+{
+  "name": "eslint-plugin-yangxu",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "A collection of personal ESLint rules for yangxu.",
+  "author": "yangxu52",
+  "license": "MIT",
+  "homepage": "https://github.com/yangxu52/eslint-plugin-yangxu#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangxu52/eslint-plugin-yangxu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yangxu52/eslint-plugin-yangxu/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "yangxu"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": "^22.19.0 || ^24.11.0 || >=26.0.0"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "lint": "eslint .",
+    "lint:fix": "pnpm run lint -- --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "eslint": "^10.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "tsdown": "^0.23.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "^8.71.1",
+    "vitest": "^5.0.3"
+  },
+  "packageManager": "pnpm@12.4.2"
+}
