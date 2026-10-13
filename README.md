@@ -30,7 +30,7 @@ export default [
 
 ## Relationship to `eslint-config-yangxu`
 
-`eslint-config-yangxu` composes this plugin only when `yangxu/*` rules are enabled, so you usually do not need to install this package directly.
+This package is maintained independently from `eslint-config-yangxu`. The current config package does not depend on or enable this plugin because this first release has no `yangxu/*` rules. A future rule release may add an explicit integration after the rule contract is defined.
 
 ## License
 
